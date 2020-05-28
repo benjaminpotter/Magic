@@ -16,12 +16,15 @@ public class Living : MonoBehaviour
     {
         health -= damage;
 
-        if (health < 0)
+        if (health <= 0)
             Die();
     }
 
     private void Die()
     {
         Debug.Log(name + " died.");
+
+        // destroy this enemy
+        Destroy(gameObject);
     }
 }
