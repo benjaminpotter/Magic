@@ -16,6 +16,6 @@ public class PlayerController : MonoBehaviour
 
     public void Move(float target)
     {
-        transform.Translate(new Vector2(target, transform.position.y));
+        transform.Translate(new Vector2(target, 0));
     }
 }

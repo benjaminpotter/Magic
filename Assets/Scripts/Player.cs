@@ -21,12 +21,12 @@ public class Player : MonoBehaviour
     void Update()
     {
         float move = controls.ReadValue<float>();
-        controller.Move(move * speed * Time.deltaTime);
 
         if (move != 0.0f)
+        {
+            controller.Move(move * speed * Time.deltaTime);
             controller.FlipSprite(move > 0);
-
-        Debug.Log(move);
+        }
     }
 
     void OnDisable()
