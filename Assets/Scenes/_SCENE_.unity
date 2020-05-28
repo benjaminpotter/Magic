@@ -533,7 +533,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 623c05edb0e6d4d76bc5fbfee9649b60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 3
   controls:
     m_Name: Controls
     m_Type: 0
@@ -619,6 +619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3023e8d40ac37ed4c87e3ac95c783b65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  equipped: {fileID: 11400000, guid: 411917fb9a3fb2047bea2fe0e9fff356, type: 2}
   fireLocation: {fileID: 889844846}
 --- !u!58 &1951510381
 CircleCollider2D:
