@@ -29,7 +29,8 @@ public class Player : MonoBehaviour
     
     void HandleAttack(InputAction.CallbackContext context)
     {
-        combatant.Attack();
+        Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+        combatant.Attack(mousePosition - new Vector2(transform.position.x, transform.position.y));
     }
 
     void Update()
