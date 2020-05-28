@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 // all things that can take damage from external sources have this component
 
@@ -6,6 +7,9 @@
 public class Hitable : MonoBehaviour
 {
     private Living living;
+
+    public delegate void OnHit(float damage);
+    public OnHit wasHit;
 
     private void Start()
     {
@@ -15,6 +19,6 @@ public class Hitable : MonoBehaviour
     public void Hit(float damage)
     {
         living.Hurt(damage);
-        Debug.Log(name + " took " + damage + " damage.");
+        wasHit(damage);
     }
 }
