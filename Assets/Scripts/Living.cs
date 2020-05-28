@@ -23,5 +23,8 @@ public class Living : MonoBehaviour
     private void Die()
     {
         Debug.Log(name + " died.");
+
+        // destroy this enemy
+        Destroy(gameObject);
     }
 }
